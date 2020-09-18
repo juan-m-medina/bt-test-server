@@ -1,4 +1,4 @@
-# What is this repo about
+# What this repo is about
 
 This is a simple example of getting a Braintree integration with Google Pay options.
 The accompanying client for testing can be found here: 
