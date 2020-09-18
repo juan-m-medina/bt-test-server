@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bt-server.js"
   },
-  "author": "",
+  "author": "Juan M. Medina",
   "license": "ISC",
   "dependencies": {
     "braintree": "^2.24.0",

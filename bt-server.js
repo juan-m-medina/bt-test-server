@@ -15,6 +15,7 @@ const gateway = braintree.connect({
 });
 
 app.use(cors());
+app.use(express.json());
 
 app.get('/token', async (req, res) => {
   console.log('Received request from token');
@@ -25,6 +26,19 @@ app.get('/token', async (req, res) => {
 
     res.status(200).send(response);
   });  
+});
+
+app.post('/customer', async(req, res) => {
+  console.log('Receive request customer creation');
+  try {
+    nonce_result = await gateway.paymentMethodNonce.find(req.body.nonce);
+    result = await gateway.customer.create({ paymentMethodNonce: req.body.nonce});
+    res.status(200).send(result);
+  }
+  catch (err) {
+    console.log('Errored out on customer processing');
+    res.status(500).send(err);
+  }
 });
 
 app.listen(port, () => {
