@@ -1,7 +1,7 @@
 # What this repo is about
 
 This is a simple example of getting a Braintree integration with Google Pay options.
-The accompanying client for testing can be found here: 
+The accompanying client for testing can be found here: https://github.com/juan-m-medina/bt-test-client.
 
 # Setup
 - Install Node if you don't have it - https://nodejs.org/en/download/.
